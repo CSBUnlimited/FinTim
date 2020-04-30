@@ -149,5 +149,19 @@ namespace FinAndTime.Service
             TransactionLogs = transactionLogs;
             CurrentUser = userEntity;
         }
+
+        public async Task GenarateTransactionReportAsync()
+        {
+            IList<string> lines = new List<string>();
+            IEnumerable<TransactionEntity> transactions = Transactions.Where(t => t.IsActive).OrderByDescending(t => t.TransactionDateTime);
+
+            lines.Add("ReferenceNumber,TransactionDateTime,TransactionPartyCode,Amount,PerformedBy,Remarks");
+            foreach (TransactionEntity transaction in transactions)
+            {
+                TransactionPartyEntity partyEntity = TransactionParties.First(tp => tp.Id == transaction.TransactionPartyId);
+                lines.Add($"{transaction.ReferenceNumber},{transaction.TransactionDateTime.ToString("yyyy-MM-dd h:mm:ss tt")},{partyEntity.Code},{(transaction.Amount * (transaction.IsIncome ? 1 : -1)).ToString("0.00")},{(transaction.IsUserPerformed ? "User" : "System")},{transaction.Remarks}");
+            }
+            await _transactionModel.GenarateTransactionReportAsync(lines);
+        }
     }
 }

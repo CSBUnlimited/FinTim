@@ -145,6 +145,9 @@
   <data name="log_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\log_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Predict_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Predict_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="recent-history" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\recent-history.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -163,7 +166,7 @@
   <data name="hamburger_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hamburger_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Predict_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Predict_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="report_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\report_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -16,7 +16,7 @@ namespace FinAndTime.Service
 
         public bool IsAvailableEnoughtData(int monthsBack)
         {
-            bool isAvailable = false;
+            bool isAvailable = true;
 
             DateTime todayDate = DateTime.Now;
             todayDate = todayDate.Date;// Remove time

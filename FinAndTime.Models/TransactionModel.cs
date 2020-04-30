@@ -5,6 +5,8 @@ using FinAndTime.Methods;
 using System;
 using System.Collections.Generic;
 using System.Data.SQLite;
+using System.Diagnostics;
+using System.IO;
 using System.Threading.Tasks;
 
 namespace FinAndTime.Models
@@ -110,6 +112,22 @@ namespace FinAndTime.Models
             };
 
             return await SqliteConnector.ExecuteNonQueryAsync(query, parameters, true);
+        }
+
+        public async Task GenarateTransactionReportAsync(IEnumerable<string> lines)
+        {
+            await Task.Run(() =>
+            {
+                FileConnector.CheckFolder(FinTimApplication.AppSettings.ReportFolderPath);
+                string path = FileConnector.CombineFolderAndFilePath(FinTimApplication.AppSettings.ReportFolderPath, $"{DateTime.Now.ToString("yyyy-MM-dd HH-mm-ss")}.csv");
+                FileConnector.WriteListOfLines(path, lines);
+
+                string fullPath =  Path.GetFullPath(path);
+
+                string cmd = "explorer.exe";
+                string arg = "/select, " + fullPath;
+                Process.Start(cmd, arg);
+            });
         }
     }
 }

@@ -84,6 +84,11 @@ namespace FinAndTime.Views.UserControls.Transaction
                 _changeContentMainFormAction(ContentItemEnum.ManageTransaction, transaction);
             }
         }
+
+        private async void reportButton_Click(object sender, EventArgs e)
+        {
+            await _applicationService.GenarateTransactionReportAsync();
+        }
     }
 
     class TransactionBinder

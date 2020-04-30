@@ -39,6 +39,7 @@ namespace FinAndTime.Views
                 UserInfoXmlPath = ConfigurationManager.AppSettings["UserInfoXmlPath"],
                 SQLiteDatabasePath = ConfigurationManager.AppSettings["SQLiteDatabasePath"],
                 LogFileFolderPath = ConfigurationManager.AppSettings["LogFileFolderPath"],
+                ReportFolderPath = ConfigurationManager.AppSettings["ReportFolderPath"],
                 SQLiteDatabaseConnectionString = ConfigurationManager.ConnectionStrings["SQLiteDatabase"].ConnectionString
             };
 

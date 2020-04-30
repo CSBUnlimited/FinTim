@@ -6,6 +6,7 @@
         public string SQLiteDatabaseConnectionString { get; set; }
         public string SQLiteDatabasePath { get; set; }
         public string LogFileFolderPath { get; set; }
+        public string ReportFolderPath { get; set; }
         public string UserInfoXmlPath { get; set; }
     }
 }

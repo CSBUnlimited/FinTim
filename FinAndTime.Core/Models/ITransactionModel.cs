@@ -11,5 +11,6 @@ namespace FinAndTime.Core.Models
         Task<int> InsertTransactionAsync(TransactionEntity transactionEntity, bool isUserPerformed = false);
         Task<int> UpdateTransactionAsync(TransactionEntity transactionEntity);
         Task<int> DeleteTransactionAsync(int id);
+        Task GenarateTransactionReportAsync(IEnumerable<string> lines);
     }
 }

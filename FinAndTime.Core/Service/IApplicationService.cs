@@ -33,6 +33,7 @@ namespace FinAndTime.Core.Service
         Task<TransactionEntity> InsertTransactionAsync(TransactionEntity transaction, bool isUserPerformed = false);
         Task<TransactionEntity> UpdateTransactionAsync(TransactionEntity transaction);
         Task DeleteTransactionAsync(int id);
+        Task GenarateTransactionReportAsync();
 
         bool IsAvailableEnoughtData(int monthBack);
         Task<PredictionEntity> GetPredictionsAsync(int monthsBack, DateTime predictDate);
